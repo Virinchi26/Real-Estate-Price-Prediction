@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Real Estate Price Prediction</title>
+	<link rel="stylesheet" href="app.css">
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="app.js"></script>
+
+</head>
+
+<body>
+	<div class="container">
+
+
+		<div class="left-side">
+			<h2>Real Estate Price Prediction</h2>
+			<div class="form-container">
+				<form class="form">
+					<label for="area">Area (sq. ft):</label>
+					<br>
+					<input class="text-input area" type="text" id="uiSqft" class="floatLabel" name="Squareft" placeholder="Enter sqaure ft">
+					<div class="header">
+						<label for="bhk">BHK:</label>
+						<div class="row radio">
+							<input type="radio" id="radio-bhk-1" name="uiBHK" value="1">
+							<label for="radio-bhk-1">1</label>
+							<input type="radio" id="radio-bhk-2" name="uiBHK" value="2" n checked>
+							<label for="radio-bhk-2">2</label>
+							<input type="radio" id="radio-bhk-3" name="uiBHK" value="3">
+							<label for="radio-bhk-3">3</label>
+							<input type="radio" id="radio-bhk-4" name="uiBHK" value="4">
+							<label for="radio-bhk-4">4</label>
+							<input type="radio" id="radio-bhk-5" name="uiBHK" value="5">
+							<label for="radio-bhk-5">5</label>
+						</div>
+					</div>
+				</form>
+
+				<form class="form">
+					<div class="header">
+						<label for="bathrooms">Bathrooms:</label>
+						<div class="row radio">
+							<input type="radio" id="bath1" name="uiBathrooms" value="1">
+							<label for="radio-bath-1">1</label>
+							<input type="radio" id="bath2" name="uiBathrooms" value="2" checked>
+							<label for="radio-bath-2">2</label>
+							<input type="radio" id="bath3" name="uiBathrooms" value="3">
+							<label for="radio-bath-3">3</label>
+							<input type="radio" id="bath4" name="uiBathrooms" value="4"> 
+							<label for="radio-bath-4">4</label>
+							<input type="radio" id="bath5" name="uiBathrooms" value="5">
+							<label for="radio-bath-5">5</label>
+						</div>
+					</div>
+
+					<div class="header">
+						<labelfor="location">Location:</labelfor=>
+							<br>
+							<select class="location" id="uiLocations">
+								<option disabled="disabled" class="location" selected="selected">Choose a Location
+								</option>
+							</select>
+					</div>
+					<br>
+					<button class="brn submit" onclick="onClickedEstimatePrice()" type="button">Predict Price</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="right-side">	
+			<div class="price-container">
+				<h2>Estimated Cost</h2>
+				<p id="uiEstimatedPrice" class="result"></p>
+			</div>
+
+			<div class="animation-container">
+				<lottie-player src="./real_estate.json" background="transparent" speed="1"
+					style="width: 110%; height: 250%;" loop autoplay></lottie-player>
+
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
